@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{74712175-98D4-49C9-877B-75065A194D37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monolith.WPF.Shell", "src\Monolith.WPF.Shell\Monolith.WPF.Shell.csproj", "{3D1AA9F3-AD29-46C7-AD7D-CDCF744A4B03}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{CFBB672C-9CD6-421D-A44B-D04DF073831B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monolith.WPF.Modules.Overview", "src\Modules\Monolith.WPF.Modules.Overview\Monolith.WPF.Modules.Overview.csproj", "{95BCC56E-C1D0-40AB-A058-8C3FE06BE9B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monolith.WPF.Infrastructure", "src\Monolith.WPF.Infrastructure\Monolith.WPF.Infrastructure.csproj", "{7C1F8749-0B7F-4688-A9A3-657A3B8043FF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Monolith.WPF.MigrationManager", "src\Monolith.WPF.MigrationManager\Monolith.WPF.MigrationManager.csproj", "{CBABDC20-4BC0-434B-A0EC-15E78A2F50AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Monolith.DAL", "..\..\Backend\Monolith.DAL\Monolith.DAL.csproj", "{61E87F22-D68B-48C0-AB33-7CC240E0A60C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D1AA9F3-AD29-46C7-AD7D-CDCF744A4B03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D1AA9F3-AD29-46C7-AD7D-CDCF744A4B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D1AA9F3-AD29-46C7-AD7D-CDCF744A4B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D1AA9F3-AD29-46C7-AD7D-CDCF744A4B03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95BCC56E-C1D0-40AB-A058-8C3FE06BE9B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95BCC56E-C1D0-40AB-A058-8C3FE06BE9B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95BCC56E-C1D0-40AB-A058-8C3FE06BE9B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95BCC56E-C1D0-40AB-A058-8C3FE06BE9B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C1F8749-0B7F-4688-A9A3-657A3B8043FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C1F8749-0B7F-4688-A9A3-657A3B8043FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C1F8749-0B7F-4688-A9A3-657A3B8043FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C1F8749-0B7F-4688-A9A3-657A3B8043FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBABDC20-4BC0-434B-A0EC-15E78A2F50AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBABDC20-4BC0-434B-A0EC-15E78A2F50AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBABDC20-4BC0-434B-A0EC-15E78A2F50AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBABDC20-4BC0-434B-A0EC-15E78A2F50AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61E87F22-D68B-48C0-AB33-7CC240E0A60C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61E87F22-D68B-48C0-AB33-7CC240E0A60C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61E87F22-D68B-48C0-AB33-7CC240E0A60C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61E87F22-D68B-48C0-AB33-7CC240E0A60C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3D1AA9F3-AD29-46C7-AD7D-CDCF744A4B03} = {74712175-98D4-49C9-877B-75065A194D37}
+		{CFBB672C-9CD6-421D-A44B-D04DF073831B} = {74712175-98D4-49C9-877B-75065A194D37}
+		{95BCC56E-C1D0-40AB-A058-8C3FE06BE9B5} = {CFBB672C-9CD6-421D-A44B-D04DF073831B}
+		{7C1F8749-0B7F-4688-A9A3-657A3B8043FF} = {74712175-98D4-49C9-877B-75065A194D37}
+		{CBABDC20-4BC0-434B-A0EC-15E78A2F50AE} = {74712175-98D4-49C9-877B-75065A194D37}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7A9DC5E-4B38-462B-BC67-1282764E0D04}
+	EndGlobalSection
+EndGlobal

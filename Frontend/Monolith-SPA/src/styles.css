@@ -1,0 +1,6 @@
+@import "~ngx-smart-modal/ngx-smart-modal";
+
+html {
+    height: 100%;
+    overflow: hidden;
+}

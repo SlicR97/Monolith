@@ -1,0 +1,116 @@
+<div class="order-panel">
+  <div class="jumbotron order-title" style="overflow:hidden">
+    <h1 class="text-center">Your Order: </h1>
+  </div>
+  <div *ngIf="!orderConfirmation">
+      <div class="order-items">
+          <div *ngFor="let product of products">
+              <app-order-item [product]="product"></app-order-item>
+          </div>
+      </div>
+      <div>
+        <div class="row">
+          <div class="col-sm-8">
+            <p class="text-left">Price of Products: </p>
+          </div>
+          <div class="col-sm-4">
+            <p class="text-right">
+              {{ getTotalPrice() | currency : "USD" }}
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-8">
+            <p class="text-left">VAT &#40;{{ getVatRate() * 100 }}&#37;&#41;:</p>
+          </div>
+          <div class="col-sm-4">
+            <p class="text-right">{{ getVat() | currency : "USD" }}</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-8">
+            <p class="text-left">Total Price: </p>
+          </div>
+          <div class="col-sm-4">
+            <p class="text-right">{{ totalPrice | currency : "USD" }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="checkoutbutton">
+        <input type="checkbox" [checked]="orderIsToGo" (change)="toggleVatRate()" title="To Go">To Go<br/>
+        <div class="row">
+          <button class="btn btn-success btn-block" (click)="toggleOrderConfirmation()" [disabled]="!productLengthOk()">
+            <h3 class="text-center">Order Now!</h3>
+          </button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="orderConfirmation">
+          <div class="row">
+            <div class="col-lg-8">
+              <p class="text-left">Price of Products: </p>
+            </div>
+            <div class="col-lg-4">
+              <p class="text-right">{{ getTotalPrice() | currency : "USD" }}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8">
+              <p class="text-left">VAT &#40;{{ getVatRate() * 100 }}&#37;&#41;:</p>
+            </div>
+            <div class="col-lg-4">
+              <p class="text-right">{{ getVat() | currency : "USD" }}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8">
+              <p class="text-left">Total Price: </p>
+            </div>
+            <div class="col-lg-4">
+              <p class="text-right">
+                {{ totalPrice | currency : "USD" }}
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8">
+              <p class="text-left">Amount Given: </p>
+            </div>
+            <div class="col-lg-4">
+              <p class="text-right">{{ amountGiven | currency : "USD" }}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8">
+              <p class="text-left">Change: </p>
+            </div>
+            <div class="col-lg-4">
+              <p class="text-right">{{ change | currency : "USD" }}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4"><button class="btn btn-block" (click)="addToAmountGiven(1)">1</button></div>
+            <div class="col-lg-4"><button class="btn btn-block" (click)="addToAmountGiven(2)">2</button></div>
+            <div class="col-lg-4"><button class="btn btn-block" (click)="addToAmountGiven(5)">5</button></div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4"><button class="btn btn-block" (click)="addToAmountGiven(10)">10</button></div>
+            <div class="col-lg-4"><button class="btn btn-block" (click)="addToAmountGiven(20)">20</button></div>
+            <div class="col-lg-4"><button class="btn btn-block" (click)="reduceFromAmountGiven()">&lt;-</button></div>
+          </div>
+        <div class="row">
+          <div class="col">
+              <button class="btn btn-success btn-block" (click)="confirmOrder()" [disabled]="!amountGivenOk()">
+                  <h3 class="text-center">Confirm Order</h3>
+              </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+              <button class="btn btn-danger btn-block" (click)="toggleOrderConfirmation()">
+                  <h3 class="text-center">Cancel</h3>
+              </button>
+          </div>
+        </div>
+  </div>
+</div>
